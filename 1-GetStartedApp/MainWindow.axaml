@@ -22,19 +22,20 @@
 		<Grid
 			Margin="5"
 			ColumnDefinitions="120, 100"
-			RowDefinitions="Auto, Auto, Auto"
-			ShowGridLines="True">
+			RowDefinitions="Auto, Auto, Auto">
 			<Label
 				Grid.Row="0"
 				Grid.Column="0"
 				Margin="10">
-				Celsis
+				Celsius
 			</Label>
 			<TextBox
+				Name="celsius"
 				Grid.Row="0"
 				Grid.Column="1"
 				Margin="0,5"
-				Text="0" />
+				Text="0"
+				TextChanged="TextBoxChanged" />
 			<Label
 				Grid.Row="1"
 				Grid.Column="0"
@@ -42,9 +43,11 @@
 				Fahrenheit
 			</Label>
 			<TextBox
+				Name="fahrenheit"
 				Grid.Row="1"
 				Grid.Column="1"
 				Margin="0,5"
+				IsReadOnly="True"
 				Text="0" />
 			<Button
 				Grid.Row="2"

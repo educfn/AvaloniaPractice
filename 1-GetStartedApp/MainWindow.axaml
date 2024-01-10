@@ -49,10 +49,10 @@
 			<Button
 				Grid.Row="2"
 				Grid.Column="1"
-				Margin="0,5">
+				Margin="0,5"
+				Click="ButtonClicked">
 				Calculate
 			</Button>
 		</Grid>
-		<Button HorizontalAlignment="Center">Calculate</Button>
 	</StackPanel>
 </Window>

@@ -1,0 +1,22 @@
+<UserControl
+	x:Class="ToDoList.Views.ToDoListView"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DesignHeight="450"
+	d:DesignWidth="250"
+	mc:Ignorable="d">
+	<DockPanel>
+		<Button
+			HorizontalAlignment="Stretch"
+			HorizontalContentAlignment="Center"
+			DockPanel.Dock="Bottom">
+			Add Item
+		</Button>
+		<StackPanel>
+			<CheckBox Margin="4">Walk the dog</CheckBox>
+			<CheckBox Margin="4">Buy some milk</CheckBox>
+		</StackPanel>
+	</DockPanel>
+</UserControl>

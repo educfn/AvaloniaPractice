@@ -1,5 +1,6 @@
 ﻿using ReactiveUI;
 using System.Reactive;
+using System.Windows.Input;
 using ToDoList.DataModel;
 
 namespace ToDoList.ViewModels
@@ -27,5 +28,7 @@ namespace ToDoList.ViewModels
             get => this._description;
             set => this.RaiseAndSetIfChanged(ref _description, value);
         }
+
+
     }
 }

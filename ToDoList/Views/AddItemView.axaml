@@ -13,13 +13,15 @@
 		<Button
 			HorizontalAlignment="Stretch"
 			HorizontalContentAlignment="Center"
-			DockPanel.Dock="Bottom">
+			DockPanel.Dock="Bottom"
+			Command="{Binding CancelCommand}">
 			Cancel
 		</Button>
 		<Button
 			HorizontalAlignment="Stretch"
 			HorizontalContentAlignment="Center"
-			DockPanel.Dock="Bottom">
+			DockPanel.Dock="Bottom"
+			Command="{Binding OkCommand}">
 			Ok
 		</Button>
 		<TextBox

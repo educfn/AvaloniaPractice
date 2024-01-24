@@ -44,7 +44,7 @@ namespace ToDoList.ViewModels
                     ContentViewModel = ToDoList;
                 });
 
-            ContentViewModel = new AddItemViewModel();
+            ContentViewModel = addItemViewModel;
         }
     }
 }

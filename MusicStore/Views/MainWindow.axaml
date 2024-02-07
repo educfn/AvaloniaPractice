@@ -10,9 +10,9 @@
 	d:DesignWidth="800"
 	x:DataType="vm:MainWindowViewModel"
 	Background="Transparent"
+	ExtendClientAreaToDecorationsHint="True"
 	Icon="/Assets/avalonia-logo.ico"
 	TransparencyLevelHint="AcrylicBlur"
-	ExtendClientAreaToDecorationsHint="True"
 	mc:Ignorable="d">
 
 	<Design.DataContext>
@@ -33,6 +33,14 @@
 					TintOpacity="1" />
 			</ExperimentalAcrylicBorder.Material>
 		</ExperimentalAcrylicBorder>
-	</Panel>
+		<Panel Margin="40">
+			<Button
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Content="Buy Music">
+				<PathIcon Data="{StaticResource store_microsoft_regular}"/>
+			</Button>
+		</Panel>
 
+	</Panel>
 </Window>

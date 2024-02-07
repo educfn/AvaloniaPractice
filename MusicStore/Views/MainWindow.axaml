@@ -13,6 +13,7 @@
 	ExtendClientAreaToDecorationsHint="True"
 	Icon="/Assets/avalonia-logo.ico"
 	TransparencyLevelHint="AcrylicBlur"
+	WindowStartupLocation="CenterScreen"
 	mc:Ignorable="d">
 
 	<Design.DataContext>

@@ -1,18 +1,29 @@
-﻿using ReactiveUI;
+﻿using System;
+using System.Collections.Generic;
+using System.Reactive.Linq;
+using System.Text;
 using System.Windows.Input;
+using MusicStore.ViewModels;
+using ReactiveUI;
 
 namespace MusicStore.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        public ICommand BuyMusicCommand { get; }
-
         public MainWindowViewModel()
         {
-            BuyMusicCommand = ReactiveCommand.Create(() =>
-            {
+            ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
 
+            BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
+            {
+                var store = new MusicStoreViewModel();
+
+                var result = await ShowDialog.Handle(store);
             });
         }
+
+        public ICommand BuyMusicCommand { get; }
+
+        public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
     }
 }

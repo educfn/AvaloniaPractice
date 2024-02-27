@@ -1,6 +1,5 @@
 ﻿using ReactiveUI;
 using System.Reactive;
-using System.Windows.Input;
 using ToDoList.DataModel;
 
 namespace ToDoList.ViewModels

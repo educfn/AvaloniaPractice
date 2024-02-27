@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MusicStore.ViewModels
+﻿namespace MusicStore.ViewModels
 {
-    public class AlbumViewModel
+    public class AlbumViewModel : ViewModelBase
     {
     }
 }

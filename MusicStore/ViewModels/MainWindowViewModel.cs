@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Linq;
-using System.Text;
+﻿using System.Reactive.Linq;
 using System.Windows.Input;
-using MusicStore.ViewModels;
 using ReactiveUI;
 
 namespace MusicStore.ViewModels

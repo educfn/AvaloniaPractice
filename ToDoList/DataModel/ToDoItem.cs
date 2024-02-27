@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ToDoList.DataModel
+﻿namespace ToDoList.DataModel
 {
     public class ToDoItem
     {

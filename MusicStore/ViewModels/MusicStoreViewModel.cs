@@ -1,5 +1,8 @@
-﻿using ReactiveUI;
+﻿using MusicStore.Models;
+using ReactiveUI;
+using System;
 using System.Collections.ObjectModel;
+using System.Reactive.Linq;
 
 namespace MusicStore.ViewModels
 {
@@ -12,9 +15,29 @@ namespace MusicStore.ViewModels
 
         public MusicStoreViewModel()
         {
-            SearchResults.Add(new AlbumViewModel());
-            SearchResults.Add(new AlbumViewModel());
-            SearchResults.Add(new AlbumViewModel());
+            this.WhenAnyValue(x => x.SearchResults)
+                .Throttle(TimeSpan.FromMilliseconds(400))
+                .ObserveOn(RxApp.MainThreadScheduler)
+                .Subscribe(DoSearch!);
+        }
+
+        private async void DoSearch(string s)
+        {
+            IsBusy = true;
+            SearchResults.Clear();
+
+            if (!string.IsNullOrWhiteSpace(s))
+            {
+                var albums = await Album.SearchAsync(s);
+
+                foreach(var album in albums)
+                {
+                    var vm = new AlbumViewModel(album);
+                    SearchResults.Add(vm);
+                }
+            }
+
+            IsBusy = false;
         }
 
         public string? SearchText
